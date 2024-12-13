@@ -50,7 +50,7 @@ namespace Hash
                    richTextBox1.AppendText("\n\n");
                 }
 
-                richTextBox1.AppendText("文件路径: " + filepath + "\n");
+                richTextBox1.AppendText("文件路径: " + filepath.Trim() + "\n");
                 if (Get_fileversion(filepath) != "")
                 {
                    AppendTextWithProgress(Get_fileversion(filepath), totalsteps);
@@ -112,7 +112,7 @@ namespace Hash
         /// </summary>
         private string Get_filedate(string filepath)
         {
-            FileInfo fileInfo = new FileInfo(filepath);
+            FileInfo fileInfo = new FileInfo(filepath.Trim());
             DateTime lastModifedtime = fileInfo.LastWriteTime;
             if (datebox.Checked)
             {
@@ -142,7 +142,7 @@ namespace Hash
         {
             if (md5box.Checked)
             {
-                using (FileStream fileStream = File.OpenRead(filepath))
+                using (FileStream fileStream = File.OpenRead(filepath.Trim()))
                 {
                     using (MD5 md5 = MD5.Create())
                     {
@@ -159,7 +159,7 @@ namespace Hash
         {
             if (sha1box.Checked)
             {
-                using (FileStream fileStream = File.OpenRead(filepath))
+                using (FileStream fileStream = File.OpenRead(filepath.Trim()))
                 {
                     using (SHA1 sha1 = SHA1.Create())
                     {
@@ -176,7 +176,7 @@ namespace Hash
             
             if(crc32box.Checked)
             {
-                byte[] filedata = File.ReadAllBytes(fileName);
+                byte[] filedata = File.ReadAllBytes(fileName.Trim());
                 uint crc = Crc32Algorithm.Compute(filedata, 0, filedata.Length);
                 return "CRC32: " + crc.ToString("X8");
             }

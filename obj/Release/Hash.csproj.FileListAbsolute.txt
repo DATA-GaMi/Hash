@@ -1,0 +1,10 @@
+E:\GitHub Items\Hash\bin\Release\Hash.exe.config
+E:\GitHub Items\Hash\bin\Release\Hash.exe
+E:\GitHub Items\Hash\bin\Release\Hash.pdb
+E:\GitHub Items\Hash\obj\Release\Hash.csproj.AssemblyReference.cache
+E:\GitHub Items\Hash\obj\Release\Hash.Form1.resources
+E:\GitHub Items\Hash\obj\Release\Hash.Properties.Resources.resources
+E:\GitHub Items\Hash\obj\Release\Hash.csproj.GenerateResource.cache
+E:\GitHub Items\Hash\obj\Release\Hash.csproj.CoreCompileInputs.cache
+E:\GitHub Items\Hash\obj\Release\Hash.exe
+E:\GitHub Items\Hash\obj\Release\Hash.pdb
